@@ -40,7 +40,7 @@ public class HelloController {
 
     // 请求url:/1/say
     @RequestMapping(path = "/{id}/hi", method = RequestMethod.GET)
-    public String hi(@PathVariable(name="id") int id){
+    public String hi(@PathVariable(name="id", required = true) int id){
         return "id = "+id;
     }
 
