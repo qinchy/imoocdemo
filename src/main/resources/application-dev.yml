@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  context-path: /imoocdemo
+wechat:
+    url:
+    token: wx7b1e67aae4f216dc
+    encodingaeskey:
+    appid: wx7b1e67aae4f216dc
+    appsecret: d8bc405c396addebe633c18ad55907be
+    accessToken:
+      server:
+        class: com.qinchy.abc
+    ticket:
+      jsapi:
+        server:
+          class: com.qinchy.def
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/DB_01?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
