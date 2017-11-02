@@ -107,7 +107,7 @@ public class StudentController {
 
 //        if (StringUtils.isNotBlank(name)) {
             // name采用“模糊”的方式查询
-            matcher.withMatcher("name", ExampleMatcher.GenericPropertyMatchers.startsWith());
+            matcher.withMatcher("name", ExampleMatcher.GenericPropertyMatchers.contains());
 //        }
 //        if (null != age) {
             // age采用精确匹配
