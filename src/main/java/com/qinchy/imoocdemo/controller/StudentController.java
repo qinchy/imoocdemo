@@ -105,14 +105,15 @@ public class StudentController {
         matcher.withIgnoreCase(true);
         matcher.withIgnoreNullValues();
 
-//        if (StringUtils.isNotBlank(name)) {
+        if (StringUtils.isNotBlank(name)) {
             // name采用“模糊”的方式查询
+            // FIXME,这里模糊匹配不生效
             matcher.withMatcher("name", ExampleMatcher.GenericPropertyMatchers.contains());
-//        }
-//        if (null != age) {
+        }
+        if (null != age) {
             // age采用精确匹配
             matcher.withMatcher("age", ExampleMatcher.GenericPropertyMatchers.exact());
-//        }
+        }
 
         Example<Student> example = Example.of(stu, matcher);
         return studentRepository.findAll(example);
